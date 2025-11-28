@@ -1,9 +1,9 @@
 
 # Quantitative Trading Strategy Backtest Report
 
-**Stock Ticker:** MSFT
+**Stock Ticker:** NVDA
 **Model:** Reinforcement Learning (PPO) + Multi-Factor Analysis (with pre-calculated factors)
-**Model File:** `MSFT_rl_model_best.zip`
+**Model File:** `NVDA_rl_model_best.zip`
 
 ## Data Periods
 * **Training Data:** 2000-10-16 to 2024-07-01
@@ -13,19 +13,19 @@
 
 | Metric | Strategy (RL + Multi-Factor) | Buy & Hold |
 |--------|------------------------------|------------|
-| Annualized Return | 30.05% | 27.03% |
-| Sharpe Ratio | 1.415 | 1.040 |
-| Maximum Drawdown | -12.93% | -21.98% |
-| Conditional VaR (95%) | -2.28% | -3.58% |
-| Annualized Volatility | 19.94% | 26.30% |
-| Win Rate | 59.09% | N/A |
-| Total Trades | 35 | 1 |
-| Final Portfolio Net Worth | 1,238,324.85 USD | 1,214,854.44 USD |
+| Annualized Return | 108.25% | 59.62% |
+| Sharpe Ratio | 2.130 | 1.132 |
+| Maximum Drawdown | -18.53% | -36.89% |
+| Conditional VaR (95%) | -4.87% | -7.71% |
+| Annualized Volatility | 37.70% | 54.39% |
+| Win Rate | 62.50% | N/A |
+| Total Trades | 23 | 1 |
+| Final Portfolio Net Worth | 1,816,234.51 USD | 1,462,870.42 USD |
 | Initial Capital | 1,000,000.00 USD | 1,000,000.00 USD |
 
 ## Trade Records and Charts
-* **Detailed Trade Log:** See `MSFT_trades_best.csv` (strategy only)
-* **Interactive Trading Chart:** See `MSFT_trading_chart_best.html` (open with browser, includes Buy&Hold comparison)
+* **Detailed Trade Log:** See `NVDA_trades_best.csv` (strategy only)
+* **Interactive Trading Chart:** See `NVDA_trading_chart_best.html` (open with browser, includes Buy&Hold comparison)
 * **Detailed Execution Log:** See `trading_strategy.log`
 
 ## Strategy Description
@@ -51,4 +51,4 @@ This strategy uses a reinforcement learning agent (PPO) to make trading decision
 
 ---
 
-*Report generated on 2025-09-02 06:20:54*
+*Report generated on 2025-09-01 12:47:14*

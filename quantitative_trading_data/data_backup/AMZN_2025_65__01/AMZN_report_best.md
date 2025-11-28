@@ -7,7 +7,7 @@
 
 ## Data Periods
 * **Training Data:** 2000-10-16 to 2024-07-01
-* **Backtest (Validation) Data:** 2024-07-01 to 2025-06-30
+* **Backtest (Test) Data:** 2024-07-01 to 2025-06-30
 
 ## Backtest Performance Metrics Comparison
 

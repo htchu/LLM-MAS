@@ -122,7 +122,7 @@ from datetime import datetime, timedelta
 
 # Generate sample dates
 start_date = '2000-01-01'
-end_date = '2024-12-31'
+end_date = '2025-06-30'
 dates = pd.date_range(start=start_date, end=end_date, freq='D')
 
 # Remove weekends (assuming stock market days only)
@@ -133,10 +133,10 @@ np.random.seed(101)
 factor_data = {
     'Date': dates,
     'fundamental_score': np.random.normal(0, 1, len(dates)),
-    'sentiment_score': np.random.normal(0, 1, len(dates)),
+    'sentiment_score': np.random.normal(-1, 1, len(dates)),
     'industry_trend_score': np.random.normal(0, 1, len(dates)),
     'market_risk_factor': np.random.normal(0, 1, len(dates)),
-    'black_swan_risk': np.random.exponential(0.5, len(dates))
+    'black_swan_risk': np.random.exponential(0, 1, len(dates))
 }
 
 factor_df = pd.DataFrame(factor_data)
@@ -193,9 +193,9 @@ You can modify the trading configuration by editing the `TradingConfig` class:
 
 ```python
 # Example: Change stock ticker and parameters
-TradingConfig.STOCK_TICKER = "TSLA"  # Tesla instead of Apple
-TradingConfig.INITIAL_BALANCE = 100_000  # $100k instead of $1M
-TradingConfig.N_OPTUNA_TRIALS = 10  # Fewer trials for faster testing
+TradingConfig.STOCK_TICKER = "AAPL"  # Apple 'AAPL' can change to another 'AMZN', 'MSFT', 'TSLA', 'NVDA'
+TradingConfig.INITIAL_BALANCE = 1000_000  # $1M
+TradingConfig.N_OPTUNA_TRIALS = 20  # Fewer trials for faster testing
 ```
 
 ## Expected Output Files
@@ -279,9 +279,9 @@ gc.collect()
 ### 3. Use Shorter Training Periods for Testing
 ```python
 # For quick testing, use recent data only
-TradingConfig.TRAIN_START_DATE = "2022-01-01"
-TradingConfig.TEST_START_DATE = "2023-01-01"
-TradingConfig.TEST_END_DATE = "2023-12-31"
+TradingConfig.TRAIN_START_DATE = "2000-01-01"
+TradingConfig.TEST_START_DATE = "2024-07-01"
+TradingConfig.TEST_END_DATE = "2025-06-30"
 ```
 
 ## Advanced Usage
